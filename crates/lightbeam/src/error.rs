@@ -1,4 +1,4 @@
-use capstone;
+// use capstone;
 use thiserror::Error;
 use wasmparser::BinaryReaderError;
 
@@ -24,8 +24,8 @@ impl From<BinaryReaderError> for Error {
     }
 }
 
-impl From<capstone::Error> for Error {
-    fn from(e: capstone::Error) -> Self {
-        Error::Disassembler(e.to_string())
-    }
-}
+// impl From<capstone::Error> for Error {
+//     fn from(e: capstone::Error) -> Self {
+//         Error::Disassembler(e.to_string())
+//     }
+// }

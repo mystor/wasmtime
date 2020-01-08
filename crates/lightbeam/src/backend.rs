@@ -10,6 +10,7 @@ use dynasmrt::x64::Assembler;
 use dynasmrt::{AssemblyOffset, DynamicLabel, DynasmApi, DynasmLabelApi, ExecutableBuffer};
 use either::Either;
 
+
 use std::{
     any::{Any, TypeId},
     cmp::Ordering,
@@ -49,6 +50,12 @@ mod magic {
         ir::ExternalName::user(1, 3)
     }
 }
+
+// XXX STUB OUT THE MACRO CAUSE AAAAA
+macro_rules! is_x86_feature_detected {
+    ($($t:tt)*) => { false };
+}
+
 
 /// Size of a pointer on the target in bytes.
 const WORD_SIZE: u32 = 8;

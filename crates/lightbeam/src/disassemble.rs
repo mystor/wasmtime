@@ -1,4 +1,4 @@
-use capstone::prelude::*;
+// use capstone::prelude::*;
 use dynasmrt::AssemblyOffset;
 use std::error::Error;
 use std::fmt::{Display, Write};
@@ -7,6 +7,8 @@ pub fn disassemble(
     mem: &[u8],
     mut ops: &[(AssemblyOffset, impl Display)],
 ) -> Result<(), Box<dyn Error>> {
+    panic!()
+        /*
     let cs = Capstone::new()
         .x86()
         .mode(arch::x86::ArchMode::Mode64)
@@ -48,4 +50,5 @@ pub fn disassemble(
     }
 
     Ok(())
+*/
 }
